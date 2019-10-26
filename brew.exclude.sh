@@ -20,8 +20,13 @@ brew upgrade
 
 
 # ---------------------------------------------
-# ZSH
+# iTerm2 & ZSH
 # ---------------------------------------------
+
+# Specify the preferences directory
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/dev/dotfiles/iterm2_preferences"
+# Tell iTerm2 to use the custom preferences in the directory
+defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 
 # Install ZSH
 brew install zsh zsh-completions
