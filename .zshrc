@@ -4,6 +4,7 @@ eval $(thefuck --alias)
 
 ### End Steve stuff ###
 
+
 ### SimSpace Stuff ###
 export PATH="$PATH:/Users/steve/dev/ci/scripts"
 
@@ -15,19 +16,13 @@ export NVM_DIR="$HOME/.nvm"
 
 ### End SimSpace Stuff ###
 
+
 ### Alias ###
-alias ll="ls -al"
-
 alias o="open ."
-
 alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
-
 alias reset-bluetooth="echo 'sudo rm -R /Library/Preferences/com.apple.Bluetooth.plist'"
-
 alias yarnstartnocat="unset WDS_HOST && yarn start:modern:hmr"
-
 alias sshit="ssh -i ~/.ssh/simadmin.pem -p 6000 -L 9050:localhost:9050 simadmin@qa-portal"
-
 alias git-delete-all-branches='git branch | egrep -v "(^\*|master|dev)" | xargs git branch -d'
 
 
