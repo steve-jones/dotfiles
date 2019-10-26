@@ -1,4 +1,7 @@
 ### Steve stuff: ###
+# Set machine username
+USER=`whoami`
+
 # Be able to use 'thefuck' wherever
 eval $(thefuck --alias)
 
@@ -6,7 +9,7 @@ eval $(thefuck --alias)
 
 
 ### SimSpace Stuff ###
-export PATH="$PATH:/Users/steve/dev/ci/scripts"
+# export PATH="$PATH:/Users/$USER/dev/ci/scripts"
 
 # NVM Install (Portal Getting Started - Step 2)
 export NVM_DIR="$HOME/.nvm"
@@ -29,14 +32,14 @@ alias git-delete-all-branches='git branch | egrep -v "(^\*|master|dev)" | xargs 
 ### ZSH STUFF ###
 
 # Set default zsh user so it's hidden when user is steve
-DEFAULT_USER=steve
+DEFAULT_USER=$USER
 #####################################################################
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/steve/.oh-my-zsh"
+export ZSH="/Users/$USER/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
