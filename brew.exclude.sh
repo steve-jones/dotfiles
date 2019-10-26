@@ -20,6 +20,19 @@ brew upgrade
 
 
 # ---------------------------------------------
+# ZSH
+# ---------------------------------------------
+
+# Install ZSH
+brew install zsh zsh-completions
+
+# To set zsh as your default shell, execute the following for macOS High Sierra
+chsh -s /bin/zsh
+
+# Install Oh My Zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# ---------------------------------------------
 # Programming Languages and Frameworks
 # ---------------------------------------------
 
