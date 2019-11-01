@@ -11,12 +11,6 @@ eval $(thefuck --alias)
 ### SimSpace Stuff ###
 # export PATH="$PATH:/Users/$USER/dev/ci/scripts"
 
-# NVM Install (Portal Getting Started - Step 2)
-export NVM_DIR="$HOME/.nvm"
-
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completio
-
 ### End SimSpace Stuff ###
 
 
@@ -27,6 +21,7 @@ alias reset-bluetooth="echo 'sudo rm -R /Library/Preferences/com.apple.Bluetooth
 alias yarnstartnocat="unset WDS_HOST && yarn start:modern:hmr"
 alias sshit="ssh -i ~/.ssh/simadmin.pem -p 6000 -L 9050:localhost:9050 simadmin@qa-portal"
 alias git-delete-all-branches='git branch | egrep -v "(^\*|master|dev)" | xargs git branch -d'
+alias zshconfig="vim ~/.zshrc"
 
 
 ### ZSH STUFF ###
