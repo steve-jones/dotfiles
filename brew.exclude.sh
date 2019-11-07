@@ -67,7 +67,7 @@ brew install python
 brew install yarn
 
 # thefuck - Magnificent app which corrects your previous console command.
-# brew install thefuck
+brew install thefuck
 
 # Remove outdated versions from the cellar
 brew cleanup
