@@ -66,5 +66,8 @@ brew install python
 # Yarn - an alternative to npm
 brew install yarn
 
+# thefuck - Magnificent app which corrects your previous console command.
+# brew install thefuck
+
 # Remove outdated versions from the cellar
 brew cleanup

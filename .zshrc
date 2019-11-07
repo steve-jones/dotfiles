@@ -14,16 +14,6 @@ eval $(thefuck --alias)
 ### End SimSpace Stuff ###
 
 
-### Alias ###
-alias o="open ."
-alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
-alias reset-bluetooth="echo 'sudo rm -R /Library/Preferences/com.apple.Bluetooth.plist'"
-alias yarnstartnocat="unset WDS_HOST && yarn start:modern:hmr"
-alias sshit="ssh -i ~/.ssh/simadmin.pem -p 6000 -L 9050:localhost:9050 simadmin@qa-portal"
-alias git-delete-all-branches='git branch | egrep -v "(^\*|master|dev)" | xargs git branch -d'
-alias zshconfig="vim ~/.zshrc"
-
-
 ### ZSH STUFF ###
 
 # Set default zsh user so it's hidden when user is steve
@@ -100,7 +90,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git nvm thefuck)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -129,3 +119,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+### Alias ###
+alias o="open ."
+alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
+alias reset-bluetooth="echo 'sudo rm -R /Library/Preferences/com.apple.Bluetooth.plist'"
+alias yarnstartnocat="unset WDS_HOST && yarn start:modern:hmr"
+alias sshit="ssh -i ~/.ssh/simadmin.pem -p 6000 -L 9050:localhost:9050 simadmin@qa-portal"
+alias git-delete-all-branches='git branch | egrep -v "(^\*|master|dev)" | xargs git branch -d'
+alias zshconfig="vim ~/.zshrc"
