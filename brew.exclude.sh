@@ -67,7 +67,7 @@ brew install python
 brew install yarn
 
 # Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions
-brew install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 
 # thefuck - Magnificent app which corrects your previous console command.
 brew install thefuck
