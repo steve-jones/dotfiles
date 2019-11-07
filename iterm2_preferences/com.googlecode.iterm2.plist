@@ -285,7 +285,7 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>127 443 592 584 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 614 586 411 0 0 1680 1027 </string>
+	<string>0 616 586 411 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>212 101 586 411 0 0 1680 1050 </string>
 	<key>New Bookmarks</key>
@@ -560,7 +560,7 @@
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
-			<string>No</string>
+			<string>Recycle</string>
 			<key>Default Bookmark</key>
 			<string>No</string>
 			<key>Description</key>
@@ -3062,9 +3062,9 @@
 	<key>NoSyncInstallationId</key>
 	<string>51CBB0B0-7F18-4236-8F94-ED8FA0CDA06E</string>
 	<key>NoSyncLastTipTime</key>
-	<real>594315819.92987597</real>
+	<real>594698383.25058103</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>4</integer>
+	<integer>6</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>594056084.24638999</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
@@ -3797,10 +3797,12 @@
 	<real>593771457.87957394</real>
 	<key>NoSyncTipsToNotShow</key>
 	<array>
-		<string>000</string>
-		<string>0000</string>
+		<string>0003</string>
 		<string>0001</string>
+		<string>000</string>
 		<string>0002</string>
+		<string>0000</string>
+		<string>0004</string>
 	</array>
 	<key>PointerActions</key>
 	<dict>
@@ -3850,7 +3852,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-10-31T15:36:41Z</date>
+	<date>2019-11-06T23:23:22Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
@@ -3861,6 +3863,8 @@
 	<real>0.13978280141843971</real>
 	<key>SwitchPaneModifier</key>
 	<integer>4</integer>
+	<key>TimeBetweenTips</key>
+	<real>604800</real>
 	<key>UKCrashReporterLastCrashReportDate</key>
 	<real>1572078848</real>
 	<key>VisualIndicatorForEsc</key>
