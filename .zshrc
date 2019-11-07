@@ -1,12 +1,8 @@
-### Steve stuff: ###
 # Set machine username
 USER=`whoami`
 
-### End Steve stuff ###
-
-
-### SimSpace Stuff ###
-# export PATH="$PATH:/Users/$USER/dev/ci/scripts"
+### SS Stuff ###
+export PATH="$PATH:/Users/$USER/dev/ci/scripts"
 
 ### End SimSpace Stuff ###
 
