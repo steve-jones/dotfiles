@@ -282,12 +282,16 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>209 2106 620 392 -1081 1050 3200 1800 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>127 443 592 584 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 616 586 411 0 0 1680 1050 </string>
+	<string>0 0 1680 1050 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>212 101 586 411 0 0 1680 1050 </string>
+	<string>-394 2060 586 411 -777 1050 3008 1669 </string>
+	<key>NSWindow Frame iTerm Window 2</key>
+	<string>254 55 586 411 0 0 1680 1050 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -3051,6 +3055,7 @@
 	<key>NoSyncAllAppVersions</key>
 	<array>
 		<string>3.3.6</string>
+		<string>3.3.7</string>
 	</array>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
@@ -3059,12 +3064,14 @@
 		<key>topLeft</key>
 		<string>{518, 836}</string>
 	</dict>
+	<key>NoSyncHaveUsedCopyMode</key>
+	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>51CBB0B0-7F18-4236-8F94-ED8FA0CDA06E</string>
 	<key>NoSyncLastTipTime</key>
-	<real>594698383.25058103</real>
+	<real>597801884.88025403</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>6</integer>
+	<integer>15</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>594056084.24638999</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
@@ -3797,12 +3804,17 @@
 	<real>593771457.87957394</real>
 	<key>NoSyncTipsToNotShow</key>
 	<array>
+		<string>0006</string>
 		<string>0003</string>
+		<string>0000</string>
+		<string>0007</string>
+		<string>0004</string>
 		<string>0001</string>
 		<string>000</string>
+		<string>0008</string>
+		<string>0005</string>
 		<string>0002</string>
-		<string>0000</string>
-		<string>0004</string>
+		<string>0009</string>
 	</array>
 	<key>PointerActions</key>
 	<dict>
@@ -3843,6 +3855,8 @@
 	<true/>
 	<key>QuitWhenAllWindowsClosed</key>
 	<false/>
+	<key>SUAutomaticallyUpdate</key>
+	<true/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
@@ -3852,8 +3866,10 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-11-06T23:23:22Z</date>
+	<date>2019-12-11T19:10:11Z</date>
 	<key>SUSendProfileInfo</key>
+	<false/>
+	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
 	<false/>
@@ -3870,7 +3886,7 @@
 	<key>VisualIndicatorForEsc</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.3.6</string>
+	<string>3.3.7</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
