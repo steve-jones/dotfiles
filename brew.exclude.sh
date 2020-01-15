@@ -72,5 +72,9 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 # thefuck - Magnificent app which corrects your previous console command.
 brew install thefuck
 
+# Rectangle - Move and resize windows on macOS with keyboard shortcuts and snap areas https://rectangleapp.com
+brew cask install rectangle
+defaults write com.knollsoft.Rectangle alternateDefaultShortcuts -bool true
+
 # Remove outdated versions from the cellar
 brew cleanup

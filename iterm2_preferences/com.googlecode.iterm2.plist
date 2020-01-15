@@ -229,6 +229,8 @@
 	<true/>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
+	<key>HideMenuBarInFullscreen</key>
+	<false/>
 	<key>Hotkey</key>
 	<true/>
 	<key>HotkeyChar</key>
@@ -3071,7 +3073,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>597801884.88025403</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>15</integer>
+	<integer>16</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>594056084.24638999</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
@@ -3866,7 +3868,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-12-11T19:10:11Z</date>
+	<date>2019-12-16T19:41:39Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
