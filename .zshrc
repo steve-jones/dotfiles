@@ -4,8 +4,9 @@ USER=`whoami`
 ### End Steve stuff ###
 
 
-### SS Stuff ###
-export PATH="$PATH:/Users/$USER/dev/ci/scripts"
+
+# Add the portal script to your path. To make this permanent, add it into your .bashrc or .zshrc:
+eval $(~/dev/ci/deploy/portal env 2> /dev/null)
 
 ### End SimSpace Stuff ###
 
@@ -18,6 +19,7 @@ DEFAULT_USER=$USER
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$PATH:~/.local/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/$USER/.oh-my-zsh"
@@ -90,6 +92,7 @@ ZSH_THEME="agnoster"
 plugins=(git nvm thefuck)
 
 source $ZSH/oh-my-zsh.sh
+source /Users/steve/.ghcup/env
 
 # User configuration
 
@@ -125,7 +128,13 @@ alias sshit="ssh -i ~/.ssh/simadmin.pem -p 6000 -L 9050:localhost:9050 simadmin@
 alias git-delete-all-branches='git branch | egrep -v "(^\*|master|dev)" | xargs git branch -d'
 alias zshconfig="vim ~/.zshrc"
 alias vscodeconfig="code ~/Library/Application\ Support/Code/User/settings.json"
+alias hidedesk="defaults write com.apple.finder CreateDesktop false && killall Finder"
+alias showdesk="defaults write com.apple.finder CreateDesktop true && killall Finder"
+alias kubes-beta-backend="export KUBECONFIG='${HOME}/.kube/config-kubes-beta-portal' && kubectl port-forward service/portal 9050:9050"
+alias nuke="git clean -xdf"
+
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
