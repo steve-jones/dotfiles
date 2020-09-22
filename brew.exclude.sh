@@ -49,6 +49,19 @@ cd ..
 rm -rf fonts
 
 # ---------------------------------------------
+# Edit Mac System Preference - https://pawelgrzybek.com/change-macos-user-preferences-via-command-line/
+# ---------------------------------------------
+# 
+# TODO:
+# - [ ] Right click on trackpad
+# - [ ] Tap trackpad to click
+# - [ ] Show battery percentage
+# - [ ] Install iStat menus
+# - [ ] CTRL + scroll to zoom
+# - [ ] Display scalled - "looks like 1680 x 1050"
+# - [ ] Trackpad - Tracking speed 6/10
+
+# ---------------------------------------------
 # Programming Languages and Frameworks
 # ---------------------------------------------
 
