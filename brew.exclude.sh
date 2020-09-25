@@ -60,6 +60,9 @@ rm -rf fonts
 # - [ ] CTRL + scroll to zoom
 # - [ ] Display scalled - "looks like 1680 x 1050"
 # - [ ] Trackpad - Tracking speed 6/10
+# - [ ] Caps lock --> esc
+# - [ ] code .
+
 
 # ---------------------------------------------
 # Programming Languages and Frameworks
