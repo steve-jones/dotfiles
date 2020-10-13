@@ -6,7 +6,7 @@ USER=`whoami`
 
 
 # Add the portal script to your path. To make this permanent, add it into your .bashrc or .zshrc:
-eval $(~/dev/ci/deploy/portal env 2> /dev/null)
+eval $(Users/steve/dev/ci/deploy/portal env 2> /dev/null)
 
 ### End SimSpace Stuff ###
 
@@ -92,7 +92,8 @@ ZSH_THEME="agnoster"
 plugins=(git nvm thefuck)
 
 source $ZSH/oh-my-zsh.sh
-source /Users/steve/.ghcup/env
+# ghc for Haskell 
+# source /Users/steve/.ghcup/env
 
 # User configuration
 
@@ -132,7 +133,8 @@ alias hidedesk="defaults write com.apple.finder CreateDesktop false && killall F
 alias showdesk="defaults write com.apple.finder CreateDesktop true && killall Finder"
 alias kubes-beta-backend="export KUBECONFIG='${HOME}/.kube/config-kubes-beta-portal' && kubectl port-forward service/portal 9050:9050"
 alias nuke="git clean -xdf"
-
+alias dotfiles="vim ~/dev/dotfiles/brew.exclude.sh"
+alias kick-zsh="source ~/.zshrc"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -141,3 +143,5 @@ export NVM_DIR="$HOME/.nvm"
 
 # Add Visual Studio Code (code)
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
+# Add Visual Studio Code (code)
+export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Users/steve/.nvm/versions/node/v12.16.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/steve/.local/bin"
