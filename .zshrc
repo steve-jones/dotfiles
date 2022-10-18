@@ -3,7 +3,8 @@ USER=`whoami`
 
 ### End Steve stuff ###
 
-
+# Set PATH, MANPATH, etc., for Homebrew.
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Add the portal script to your path. To make this permanent, add it into your .bashrc or .zshrc:
 eval $(Users/steve/dev/ci/deploy/portal env 2> /dev/null)
@@ -89,7 +90,6 @@ ZSH_THEME="agnoster"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # Plugins (More Info): https://github.com/robbyrussell/oh-my-zsh#plugins
-plugins=(git nvm thefuck)
 
 source $ZSH/oh-my-zsh.sh
 # ghc for Haskell 
@@ -140,9 +140,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
-
-# Set PATH, MANPATH, etc., for Homebrew.
-eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # zsh-completions
   if type brew &>/dev/null; then
