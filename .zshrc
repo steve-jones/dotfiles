@@ -3,8 +3,6 @@ USER=`whoami`
 
 ### End Steve stuff ###
 
-# Set PATH, MANPATH, etc., for Homebrew.
-eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Add the portal script to your path. To make this permanent, add it into your .bashrc or .zshrc:
 eval $(Users/steve/dev/ci/deploy/portal env 2> /dev/null)
@@ -153,3 +151,5 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
 # Add Visual Studio Code (code)
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Users/steve/.nvm/versions/node/v12.16.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/steve/.local/bin"
+# Set PATH, MANPATH, etc., for Homebrew.
+eval "$(/opt/homebrew/bin/brew shellenv)"

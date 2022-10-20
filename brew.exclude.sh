@@ -55,6 +55,7 @@ rm -rf fonts
 # TODO:
 # - [ ] Right click on trackpad
 # - [ ] Tap trackpad to click
+# - [ ] Enable Double-Tap to Drag - https://apple.stackexchange.com/questions/374138/how-to-enable-double-tap-to-drag-in-mac-os-x-catalina
 # - [ ] Show battery percentage
 # - [ ] Install iStat menus
 # - [ ] CTRL + scroll to zoom
