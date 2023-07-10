@@ -127,7 +127,7 @@ alias sshit="ssh -i ~/.ssh/simadmin.pem -p 6000 -L 9050:localhost:9050 simadmin@
 alias git-delete-all-branches='git branch | egrep -v "(^\*|master|dev)" | xargs git branch -d'
 alias zshconfig="vim ~/.zshrc"
 alias vscodeconfig="code ~/Library/Application\ Support/Code/User/settings.json"
-alias hidedesk="defaults write com.apple.finder CreateDesktop false && killall Finder"
+alias hidedesk="defaults write com.apple.finder CreateDesktop false && killall Finder && echo 'hide all windows: CMD + H'"
 alias showdesk="defaults write com.apple.finder CreateDesktop true && killall Finder"
 # alias kubes-beta-backend="export KUBECONFIG='${HOME}/.kube/config-kubes-beta-portal' && kubectl port-forward service/portal 9050:9050"
 alias nuke="git clean -xdf"
