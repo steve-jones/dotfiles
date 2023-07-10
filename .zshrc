@@ -129,15 +129,21 @@ alias zshconfig="vim ~/.zshrc"
 alias vscodeconfig="code ~/Library/Application\ Support/Code/User/settings.json"
 alias hidedesk="defaults write com.apple.finder CreateDesktop false && killall Finder"
 alias showdesk="defaults write com.apple.finder CreateDesktop true && killall Finder"
-alias kubes-beta-backend="export KUBECONFIG='${HOME}/.kube/config-kubes-beta-portal' && kubectl port-forward service/portal 9050:9050"
+# alias kubes-beta-backend="export KUBECONFIG='${HOME}/.kube/config-kubes-beta-portal' && kubectl port-forward service/portal 9050:9050"
 alias nuke="git clean -xdf"
 alias dotfiles="vim ~/dev/dotfiles/brew.exclude.sh"
 alias kick-zsh="source ~/.zshrc"
+# qa backend: https://github.com/Simspace/ci/blob/dev/docs/sso.md
+alias qa-be='export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH" && kubectl config use-context dev-sso && kubectl port-forward service/portal 9050:9050'
+
+
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
+
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # zsh-completions
   if type brew &>/dev/null; then
