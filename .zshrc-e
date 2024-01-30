@@ -3,11 +3,6 @@ USER=`whoami`
 
 ### End Steve stuff ###
 
-# https://github.com/Simspace/ci/blob/dev/docs/sso.md
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-
-# export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
-export PORTAL_ROOT_DIR="/Users/steve/dev/portal-suite"
 
 # Add the portal script to your path. To make this permanent, add it into your .bashrc or .zshrc:
 eval $(Users/steve/dev/ci/deploy/portal env 2> /dev/null)
@@ -24,7 +19,7 @@ DEFAULT_USER=$USER
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-# export PATH=$PATH:~/.local/bin
+export PATH=$PATH:~/.local/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/$USER/.oh-my-zsh"
@@ -149,6 +144,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
 
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # zsh-completions
   if type brew &>/dev/null; then
@@ -161,7 +157,7 @@ export NVM_DIR="$HOME/.nvm"
 # Add Visual Studio Code (code)
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
 # Add Visual Studio Code (code)
-# export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Users/steve/.nvm/versions/node/v12.16.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/steve/.local/bin"
+export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Users/steve/.nvm/versions/node/v12.16.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/steve/.local/bin"
 # Set PATH, MANPATH, etc., for Homebrew.
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
@@ -177,5 +173,4 @@ esac
 
 #[ -f "/Users/steve/.ghcup/env" ] && source "/Users/steve/.ghcup/env" # ghcup-env
 
-#[ -f "/Users/steve/.ghcup/env" ] && source "/Users/steve/.ghcup/env" # ghcup-env
 [ -f "/Users/steve/.ghcup/env" ] && source "/Users/steve/.ghcup/env" # ghcup-env
