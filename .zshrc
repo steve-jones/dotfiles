@@ -140,7 +140,7 @@ alias nuke="git clean -xdf"
 alias dotfiles="vim ~/dev/dotfiles/brew.exclude.sh"
 alias kick-zsh="source ~/.zshrc"
 # qa backend: https://github.com/Simspace/ci/blob/dev/docs/sso.md
-alias qa-be='export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH" && kubectl config use-context dev-sso --namespace dev-portal && kubectl port-forward service/portal 9050:9050'
+alias qa-be='export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH" && kubectl config use-context dev-sso --namespace dev-portal && kubectl port-forward -n dev-portal service/portal 9050:9050'
 
 
 
