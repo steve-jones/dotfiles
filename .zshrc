@@ -1,25 +1,19 @@
-# Set machine username
-USER=`whoami`
-
-### End Steve stuff ###
 
 # https://github.com/Simspace/ci/blob/dev/docs/sso.md
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
-export PORTAL_ROOT_DIR="/Users/steve/dev/portal-suite"
+export PORTAL_ROOT_DIR="$HOME/dev/portal-suite"
 
 # Add the portal script to your path. To make this permanent, add it into your .bashrc or .zshrc:
-eval $(Users/steve/dev/ci/deploy/portal env 2> /dev/null)
+[ -x "$HOME/dev/ci/deploy/portal" ] && eval "$("$HOME/dev/ci/deploy/portal" env 2> /dev/null)"
 
-export PATH="/opt/homebrew/Cellar/llvm@12/12.0.1_1/bin:$PATH"
+[ -d "/opt/homebrew/opt/llvm@12/bin" ] && export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
 ### End SimSpace Stuff ###
 
 
 ### ZSH STUFF ###
 
-# Set default zsh user so it's hidden when user is steve
-DEFAULT_USER=$USER
 #####################################################################
 
 # If you come from bash you might have to change your $PATH.
@@ -27,13 +21,13 @@ DEFAULT_USER=$USER
 # export PATH=$PATH:~/.local/bin
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/$USER/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME=""  # Starship draws the prompt now (see starship.toml); agnoster retired 09/2026
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -97,7 +91,7 @@ ZSH_THEME="agnoster"
 
 source $ZSH/oh-my-zsh.sh
 # ghc for Haskell 
-# source /Users/steve/.ghcup/env
+# source "$HOME/.ghcup/env"
 
 # User configuration
 
@@ -160,22 +154,21 @@ export NVM_DIR="$HOME/.nvm"
 
 # Add Visual Studio Code (code)
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
-# Add Visual Studio Code (code)
-# export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Users/steve/.nvm/versions/node/v12.16.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/steve/.local/bin"
 # Set PATH, MANPATH, etc., for Homebrew.
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # pnpm
-export PNPM_HOME="/Users/steve/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
 
-# [ -f "/Users/steve/.ghcup/env" ] && source "/Users/steve/.ghcup/env" # ghcup-env
 
-#[ -f "/Users/steve/.ghcup/env" ] && source "/Users/steve/.ghcup/env" # ghcup-env
+# Claude Code (native install lives in ~/.local/bin)
+export PATH="$HOME/.local/bin:$PATH"
 
-#[ -f "/Users/steve/.ghcup/env" ] && source "/Users/steve/.ghcup/env" # ghcup-env
-[ -f "/Users/steve/.ghcup/env" ] && source "/Users/steve/.ghcup/env" # ghcup-env
+# Starship prompt: agnoster-style blocks, Solarized Dark. Config: ~/.config/starship.toml
+# (symlinked from this repo's starship.toml by bootstrap.exclude.sh). Keep this last.
+eval "$(starship init zsh)"

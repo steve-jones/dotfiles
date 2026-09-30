@@ -1,0 +1,48 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Steve's prompt (set up by Claude, 09/30/2026).
+# Starship's content drawn as agnoster-style colored blocks, Solarized Dark colors.
+# Each block carries its own notch and arrow, so a block with nothing to show
+# (not in a git repo, no Python project) simply disappears.
+# Needs a Nerd Font in iTerm (JetBrainsMono Nerd Font) for the arrow and branch glyphs.
+
+add_newline = true
+palette = "solarized"
+format = """$directory$git_branch$git_status$python$nodejs$cmd_duration$line_break$character"""
+
+[palettes.solarized]
+base03 = "#002b36"
+base02 = "#073642"
+base1 = "#93a1a1"
+blue = "#268bd2"
+yellow = "#b58900"
+cyan = "#2aa198"
+green = "#859900"
+red = "#dc322f"
+
+[directory]
+format = '[ $path$read_only ](fg:base03 bg:blue bold)[](fg:blue)'
+truncation_length = 3
+read_only = " ro"
+
+[git_branch]
+format = '[](fg:base03 bg:yellow)[  $branch ](fg:base03 bg:yellow bold)'
+
+[git_status]
+format = '([\[$all_status$ahead_behind\] ](fg:base03 bg:yellow bold))[](fg:yellow)'
+
+[python]
+format = '[](fg:base03 bg:cyan)[ $symbol$version( \($virtualenv\)) ](fg:base03 bg:cyan bold)[](fg:cyan)'
+symbol = "🐍 "
+
+[nodejs]
+format = '[](fg:base03 bg:green)[ $symbol$version ](fg:base03 bg:green bold)[](fg:green)'
+symbol = "⬢ "
+
+[cmd_duration]
+min_time = 2000
+format = '[](fg:base03 bg:base02)[ took $duration ](fg:base1 bg:base02)[](fg:base02)'
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"

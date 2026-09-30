@@ -37,16 +37,16 @@ chsh -s /bin/zsh
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-## agnoster.zsh-theme: https://github.com/agnoster/agnoster-zsh-theme
-# Powerline-patched font
-# clone
-git clone https://github.com/powerline/fonts.git --depth=1
-# install
-cd fonts
-./install.sh
-# clean-up a bit
-cd ..
-rm -rf fonts
+# iTerm2 itself
+brew install --cask iterm2
+
+# Prompt: Starship (replaced oh-my-zsh agnoster + Powerline fonts in 09/2026).
+# Config is starship.toml in this repo, linked to ~/.config/starship.toml by bootstrap.exclude.sh.
+brew install starship
+
+# Font: JetBrains Mono Nerd Font (has the arrow and branch glyphs the prompt uses).
+# The iTerm prefs in iterm2_preferences/ already select it at 14 pt.
+brew install --cask font-jetbrains-mono-nerd-font
 
 # ---------------------------------------------
 # Edit Mac System Preference - https://pawelgrzybek.com/change-macos-user-preferences-via-command-line/
@@ -85,6 +85,9 @@ brew install yarn
 
 # Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
+
+# Claude Code - native installer, lands in ~/.local/bin
+curl -fsSL https://claude.ai/install.sh | bash
 
 # thefuck - Magnificent app which corrects your previous console command.
 brew install thefuck

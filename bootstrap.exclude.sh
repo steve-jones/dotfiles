@@ -9,9 +9,12 @@ link () {
 	read resp
 	# TODO - regex here?
 	if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
-		for file in $( ls -A | grep -vE '\.exclude*|\.DS_Store|\.git$|\.gitignore|.*.md' ) ; do
+		for file in $( ls -A | grep -vE '\.exclude*|\.DS_Store|\.git$|\.gitignore|.*.md|^starship\.toml$' ) ; do
 			ln -sv "$PWD/$file" "$HOME"
 		done
+		# Starship reads ~/.config/starship.toml, so link it there instead of $HOME
+		mkdir -p "$HOME/.config"
+		ln -sfv "$PWD/starship.toml" "$HOME/.config/starship.toml"
 		# TODO: source files here?
 		echo "Symlinking complete"
 	else
