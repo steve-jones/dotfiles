@@ -33,7 +33,7 @@ export ZSH="/Users/$USER/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME=""  # Starship draws the prompt now (see starship.toml); agnoster retired 09/2026
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -179,3 +179,10 @@ esac
 
 #[ -f "/Users/steve/.ghcup/env" ] && source "/Users/steve/.ghcup/env" # ghcup-env
 [ -f "/Users/steve/.ghcup/env" ] && source "/Users/steve/.ghcup/env" # ghcup-env
+
+# Claude Code (native install lives in ~/.local/bin)
+export PATH="$HOME/.local/bin:$PATH"
+
+# Starship prompt: agnoster-style blocks, Solarized Dark. Config: ~/.config/starship.toml
+# (symlinked from this repo's starship.toml by bootstrap.exclude.sh). Keep this last.
+eval "$(starship init zsh)"
